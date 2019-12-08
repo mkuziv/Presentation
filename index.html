@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Angular</h1>
+				</section>
+				<section>
+					<p>The first version was <a href="https://en.wikipedia.org/wiki/AngularJS">AngularJS</a>.</p>
+					<p>Javascript framework was created by Google in 2009.</p>
+				</section>
+				<section id="fragments">					
+					<h3>Next Angular version was</h3>
+					<p class="fragment">Angular2</p>
+					<p class="fragment">Angular4</p>
+					<p class="fragment">Angular5</p>
+					<p class="fragment">Angular6</p>
+					<p class="fragment">Angular7</p>
+					<p class="fragment">Angular8</p>					
+				</section>
+				<section>
+					<h3>Naming</h3>
+					<p>
+						Originally, the rewrite of AngularJS was called "Angular 2" by the team, but 
+						this led to confusion among developers. To clarify, the team announced that 
+						separate terms should be used for each framework with "AngularJS" referring 
+						to the 1.X versions and "Angular" without the "JS" referring to versions 2 and up.
+					</p>
+				</section>
+				<section>
+					<section>
+						<h3>Differences between Angular and AngularJS</h3>					
+						<p>Angular was designed as a ground-up rewrite of AngularJS.</p>
+					</section>
+					<section>
+						<p>
+							Angular does not have a concept of "scope" or controllers, 
+							instead it uses a hierarchy of components as its primary architectural characteristic.
+						</p>
+					</section>
+					<section>
+						<p>
+							Angular has a different expression syntax, focusing on "[ ]" for property 
+							binding, and "( )" for event binding
+						</p>
+					</section>
+					<section>
+						<p>
+							Modularity – much core functionality has moved to modules
+						</p>
+					</section>
+					<section id="fragments">
+						<p>
+							Angular recommends the use of Microsoft's TypeScript language, 
+							which introduces the following features:
+						</p>
+						<p class="fragment">Static Typing, including Generics</p>
+						<p class="fragment">	Annotations	</p>
+					</section>
+					<section>
+						<p>
+							TypeScript is a superset of ECMAScript 6 (ES6), and is 
+							backwards compatible with ECMAScript 5 (i.e.: JavaScript).
+						</p>
+					</section>
+					<section>
+						<p>Dynamic loading</p>
+					</section>
+					<section>
+						<p>Asynchronous template compilations</p>
+					</section>
+					<section>
+						<p>
+							Iterative callbacks provided by RxJS. RxJS limits state 
+							visibility and debugging, but these can be solved with 
+							reactive add-ons like ngReact or ngrx.
+						</p>
+					</section>
+					<section>
+						<p>
+							Support for Angular Universal, which runs Angular applications on servers
+						</p>
+					</section>
+				</section>
+				<section>
+					<h3>What is the meaning of SPA and its application</h3>
+					<p>
+						Single Page Application (SPA or single-page application) implements user-friendly, 
+						interactive services. The simplest example is Gmail.						
+					</p>
+					<p>
+						Are you interested in what resources Angular has implemented? On the Made with 
+						Angular site you will find a <a href="https://www.madewithangular.com/categories/angular/">list</a> listing sites created using different versions of the framework.
+					</p>
+				</section>
+				<section id="fragments">
+					<h3>Main points of Angular architecture:</h3>
+					<p class="fragment"><a href="https://angular.io/guide/architecture-modules">Module</ah></p>
+					<p class="fragment"><a href="https://angular.io/api/core/Component">Component</a></p>
+					<p class="fragment"><a href="https://angular.io/guide/template-syntax">Template</a></p>
+					<p class="fragment"><a href="https://angular.io/guide/architecture-services">Service</a></p>
+					<p class="fragment"><a href="https://angular.io/guide/router">Router</a></p>
+					<p class="fragment"><a href="https://angular.io/guide/pipes">Pipe</a></p>
+					<p class="fragment"><a href="https://angular.io/guide/attribute-directives">Directives</a></p>
+				</section>
+				<section>
+					<h3>Module</h3>
+					<p>
+						-structural units of application that encapsulate a certain logic. 
+						In Angular, these are structures that store certain components, 
+						directives, and services that are combined with a certain logic. 
+						An example would be a user profile, a module for writing a letter, 
+						an overview of a list of letters, and more.
+					</p>
+				</section>
+				<section>
+					<h3>Component</h3>
+					<p>
+						-typescript class that stores data and logic for displaying 
+						this data in a template. The template is closely related to 
+						the component. Component data can be easily displayed in a 
+						template using a special syntax. The component can also 
+						"capture" data from the template and retrieve it directly 
+						in the script.
+					</p>
+				</section>
+				<section>
+					<h3>Template</h3>
+					<p>
+						- HTML code snippet with custom syntax added. It allows you 
+						to embed data from a component into the template without 
+						using innerHTML and similar methods. The template is 
+						specified in the component and is part of its configuration.
+					</p>
+				</section>
+				<section>
+					<section>
+					<h3>Service</h3>
+					<p>
+						—in Angular is a typescript class that performs tasks related 
+						to retrieving, storing, and processing data. For example, 
+						logging, converting data for later transfer to a component, 
+						accessing the backend, and more. Unlike components and 
+						directives, services do not work with views (templates) directly.
+					</p>
+				</section>
+					<section>
+						<h4>Tasks of services:</h4>
+					</section>
+					<section>
+						<p>
+							Provide application data. The service itself may store the 
+							data in memory or, to retrieve the data, access a data 
+							source, such as a server;
+						</p>
+					</section>
+					<section>
+						<p>
+							The service can encapsulate business logic, various 
+							computing tasks, logging tasks that are better off 
+							taking components out. This way, the component code 
+							will be focused directly on the presentation. In addition, 
+							we can solve the problem of code repetition if we 
+							need to perform the same task in different components 
+							and classes.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h3>Router</h3>
+					<p>— is a router that is designed to switch between screens to display 
+						different content..
+					</p>
+					<p>
+						In other words, when you change the URL snippet in the browser's 
+						address bar, the router monitors these changes and downloads 
+						one or the other part of the application.
+					</p>
+				</section>
+				<section>
+					<h3>Pipe</h3>
+					<p>
+						-a pipe takes in data as input and transforms it to a desired output.
+					</p>
+				</section>				
+				<section>
+					<h3>Directive</h3>
+					<p>-allow direct access to the DOM of your elements</p>
+				</section>
+				<section>
+					<h3>Thanks</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
